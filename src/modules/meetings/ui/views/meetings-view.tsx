@@ -34,8 +34,8 @@ export const MeetingsView=()=>{
         onPageChange={(page) =>setFilters({page})}    
         />
      {data.items.length=== 0 &&(
-                    <EmptyState title="Create your first meeting" description="Schedule a meeting to
-                     connect with Agents.Each meeting lets you collaborate , share ideas , and interact  with Ai agents in real time"/>
+                    <EmptyState  title="Create your first meeting" description="Schedule a meeting to
+                     connect with Agents.Each meeting lets you collaborate , share ideas , and interact  with Ai agents in real time" h={1040} w={840}/>
                 )}
   </div>
     )
