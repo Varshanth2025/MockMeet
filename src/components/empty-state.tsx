@@ -18,7 +18,15 @@ export const EmptyState=({
 }:Props)=>{
     return (
         <div className="flex flex-col items-center justify-center">
-                <Image src={image} alt="Empty" width={w} height={h} />
+<Image
+  src="/create-Meet-3.svg"
+  alt="Create Meet"
+  width={600}
+  height={400}
+  style={{ height: "auto" }} 
+  className="w-80"
+  priority
+/>
                 <div className="flex flex-col gap-y-6 max-w-md mx-auto text-center" >
                     <h6 className="text-lg font-medium" >{title}</h6>
                     <p className="text-sm text-muted-foreground ">{description}</p>
