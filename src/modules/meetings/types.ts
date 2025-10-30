@@ -1,5 +1,6 @@
 import { inferRouterOutputs } from "@trpc/server";
 import type { AppRouter } from "@/trpc/routers/_app";
+import { number, string } from "zod";
 
 export type MeetingGetOne = inferRouterOutputs<AppRouter>["meetings"]["getOne"];
 export type MeetingGetMany =
@@ -12,3 +13,11 @@ export enum MeetingStatus {
   Processing = "processing",
   Cancelled = "cancelled",
 }
+
+export type StreamTranscriptItem = {
+  speaker_id: string;
+  type: string;
+  text: string;
+  start_ts: number;
+  stop_ts: number;
+};
