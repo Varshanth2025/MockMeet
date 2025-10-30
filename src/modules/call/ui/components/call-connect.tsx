@@ -41,7 +41,8 @@ userName
             },
             tokenProvider:generateToken,
         })
-        setClient(_client)
+        setClient(_client);
+
         return ()=>{
             _client.disconnectUser();
             setClient(undefined)
@@ -75,9 +76,9 @@ userName
 
     return (
     <StreamVideo client={client}>
-<StreamCall call={call}>
-<CallUI meetingName={meetingName}/>
-</StreamCall>
+                <StreamCall call={call}>
+                        <CallUI meetingName={meetingName}/>
+                </StreamCall>
     </StreamVideo >
     )
 }
