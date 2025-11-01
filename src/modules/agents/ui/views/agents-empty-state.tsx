@@ -1,12 +1,10 @@
 
-import {AlertCircleIcon} from "lucide-react"
 import Image from "next/image";
 
 interface Props{
     title:string;
     description:string;
 }
-<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 export const EmptyState=({
     title,description
 }:Props)=>{
