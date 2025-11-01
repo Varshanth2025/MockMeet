@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata = {
   title: "MockMeet – Speak with your AI Agents",
-  description: "Developed by Varshanth",
+  description: "Experience realistic AI-driven conversations and meetings.",
   icons: {
     icon: "/logo.svg", 
   },
