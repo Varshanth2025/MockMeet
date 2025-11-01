@@ -2,11 +2,7 @@ import { polarClient } from "@/lib/polar";
 import { agents, meetings } from "@/db/schema";
 import { db } from "@/db";
 import { eq, count } from "drizzle-orm";
-import {
-  baseProcedure,
-  createTRPCRouter,
-  protectedProcedure,
-} from "@/trpc/init";
+import { createTRPCRouter, protectedProcedure } from "@/trpc/init";
 
 export const premiumRouter = createTRPCRouter({
   getCurrentSubscription: protectedProcedure.query(async ({ ctx }) => {
