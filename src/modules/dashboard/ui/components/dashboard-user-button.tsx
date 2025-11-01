@@ -2,7 +2,7 @@ import { authClient } from "@/lib/auth-client";
 import * as DropDownMenuComponents from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { GeneratedAvatar } from "@/components/generated-avatar";
-import { ChevronDownIcon, LogOutIcon } from "lucide-react";
+import { ChevronDownIcon, CreditCardIcon, LogOutIcon } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { Drawer, DrawerContent, DrawerDescription, DrawerFooter, DrawerHeader, DrawerTitle, DrawerTrigger } from "@/components/ui/drawer";
@@ -54,6 +54,10 @@ if(isMobile){
                     <DrawerDescription> {data.user.email}</DrawerDescription>
                 </DrawerHeader>
                 <DrawerFooter>
+                    <Button variant="outline" onClick={()=>authClient.customer.portal()}>
+                    <CreditCardIcon className="size-4 text-black"/>
+                    Billing
+                    </Button>
                     <Button variant="outline" onClick={onLogout}>
                     <LogOutIcon className="size-4 text-black"/>
                     Logout
@@ -90,6 +94,10 @@ if(isMobile){
                         </div>
                     </DropDownMenuComponents.DropdownMenuLabel>
                     <DropDownMenuComponents.DropdownMenuSeparator/>
+                        <DropDownMenuComponents.DropdownMenuItem className="cursor-pointer flex items-center justify-between" onClick={()=>authClient.customer.portal()}>
+                                Billing
+                                <CreditCardIcon className="size-4" />
+                        </DropDownMenuComponents.DropdownMenuItem>
                         <DropDownMenuComponents.DropdownMenuItem className="cursor-pointer flex items-center justify-between" onClick={onLogout}>
                                 Logout
                                 <LogOutIcon className="size-4" />
