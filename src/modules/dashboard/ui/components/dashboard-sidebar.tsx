@@ -9,6 +9,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 import { DashboardUserButton } from "./dashboard-user-button";
+import { DashboardTrial } from "./dashboard-trail";
 const firstSection=[
     {
         icon:VideoIcon,
@@ -103,8 +104,10 @@ const pathname=usePathname();
                 </SidebarComponents.SidebarGroup>
             </SidebarComponents.SidebarContent>
                     <SidebarComponents.SidebarFooter className="text-white">
+                        
+                        <DashboardTrial/>
                         <DashboardUserButton/>
-
+                        
                     </SidebarComponents.SidebarFooter>
         </SidebarComponents.Sidebar>
 
