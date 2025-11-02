@@ -1,5 +1,4 @@
 
-import {AlertCircleIcon} from "lucide-react"
 import Image from "next/image";
 
 interface Props{
@@ -19,10 +18,10 @@ export const EmptyState=({
     return (
         <div className="flex flex-col items-center justify-center">
 <Image
-  src="/create-Meet-3.svg"
+  src={image}
   alt="Create Meet"
-  width={600}
-  height={400}
+  width={w}
+  height={h}
   style={{ height: "auto" }} 
   className="w-80"
   priority
