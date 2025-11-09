@@ -82,8 +82,9 @@ const onSocial=(provider:"github"|"google")=>{
 
 
     return (
-        <div className="flex  flex-col gap-6">
- <Card className="overflow-hidden p-0 ">
+        <div className="">
+        <div className="flex  flex-col gap-6 ">
+ <Card className="overflow-hidden p-0 border-border">
    <CardContent className="grid p-0 md:grid-cols-2">
 <Form {...form}>
     <form onSubmit={form.handleSubmit(onSubmit)} className="p-6 md:p-8">
@@ -158,13 +159,17 @@ after:absolute after:inset-0 after:top-1/2 after:z-0 after:flex after:items-cent
   className="h-[92px] w-[92px]"
   priority
 />
-        <p className="text-2xl font-semibold text-white">MockMeet</p>
+        <p className="text-2xl font-semibold text-white mb-6">
+  MockMeet
+</p>
     </div>
     </CardContent>
    </Card>
    <div className="text-muted-foreground *:[a]:hover:text-primary text-center text-xs text-balance *:[a]:underline *:[a]:underline-offset-4">
     By clicking continue ,you agree to our <a href="#" >Terms of Service</a> and <a href="#">Privacy Policy</a>
+    <p  className="text-white my-2">Designed and developed by Varshanth G</p>
    </div>
+ </div>
  </div>
     );
 };
